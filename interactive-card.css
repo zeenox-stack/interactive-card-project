@@ -1,0 +1,271 @@
+body { 
+    padding: 0; 
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.container { 
+    display: flex;
+    font-family: inherit; 
+    width: 100%; 
+    height: 100vh; 
+} 
+
+.dekstop-theme { 
+    width: 23.5rem; 
+}
+
+.input-area { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+    width: 100%;
+}
+
+.success-message { 
+    display: none;
+    text-align: center;
+    padding: 1rem;
+}
+
+.success-message > h1{ 
+    letter-spacing: 5px; 
+    font-weight: 500;
+} 
+
+.success-message > p { 
+    font-size: 18px; 
+    opacity: 0.5;
+    padding: 0.25rem;
+}
+
+.success-message > button { 
+    width: 80vw; 
+    padding: 13.5px 20px;
+    border-radius: 10px; 
+    border: none; 
+    background-color: hsl(278, 68%, 11%); 
+    font-size: 18px; 
+    font-family: inherit; 
+    color: white;
+}
+
+.name {
+    padding: 10px;
+} 
+
+.name > label { 
+    padding: 5px; 
+    font-size: small;
+}
+
+#card-holder-name, #card-number { 
+    padding: 15px 15px 15px 30px; 
+    width: 20rem; 
+    margin: 5px; 
+    border-radius: 7.5px; 
+    border: 0.5px solid hsl(270, 3%, 87%);
+    font-family: inherit; 
+    font-size: 1rem; 
+    outline: none;
+}
+
+.card-digits { 
+    padding: 10px;
+} 
+
+.card-digits > label { 
+    padding: 5px;
+    font-size: small;
+}
+
+.backside-details { 
+    padding: 10px;
+    display: flex;
+} 
+
+.time-period > label { 
+   padding: 5px;
+   font-size: small;
+}
+
+.time-period > div { 
+    display: flex; 
+    gap: 5px;
+} 
+
+.backside-code { 
+    padding-left: 10px;
+} 
+
+.backside-code > label { 
+    padding: 5px;
+    font-size: small;
+}
+
+#cvc { 
+   width: 11rem; 
+   padding: 15px; 
+   border-radius: 7.5px; 
+   border: 0.5px solid hsl(270, 3%, 87%);
+   font-family: inherit; 
+   font-size: 1rem;
+   outline: none;
+}
+
+#month, #year { 
+    width: 2.5rem; 
+    padding: 15px; 
+    border-radius: 7.5px; 
+    border: 0.5px solid hsl(270, 3%, 87%); 
+    font-family: inherit; 
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.button { 
+    padding: 9px; 
+    width: 26rem;
+} 
+
+button { 
+    width: 90%; 
+    padding: 13.5px 20px;
+    border-radius: 10px; 
+    border: none; 
+    background-color: hsl(278, 68%, 11%); 
+    font-size: 18px; 
+    font-family: inherit; 
+    color: white;
+}
+
+
+
+.front-side { 
+    position: absolute;
+    left: 5rem; 
+    top: 8rem;
+    background-image: url(bg-card-front.png);
+    padding: 1rem 1rem; 
+    width: 20rem;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    color: white; 
+    box-shadow: 2px 2px 14px 4px rgba(0, 0, 0, 0.2);
+} 
+
+.cards-logo{ 
+    display: flex; 
+    align-items: start;
+    justify-content: left;
+    padding: 10px;
+}
+
+.details { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+} 
+
+.c-number { 
+    word-spacing: 6px; 
+    font-size: 1.2em;
+    letter-spacing: 3px;
+}
+
+.c-name { 
+    display: flex; 
+    justify-content: space-between; 
+    gap: 50px;
+}
+
+.holder-name { 
+    letter-spacing: 1.5px;
+    font-size: 15px;
+}
+
+.duration { 
+    letter-spacing: 1.5px;
+}
+
+.back-side { 
+    display: flex; 
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    background-image: url(bg-card-back.png);
+    top: 23rem;
+    right: 60%;
+    width: 19rem;
+    height: 9rem;  
+    border-radius: 8px;
+    padding: 1rem;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 5rem 1px rgba(0, 0, 0, 0.2);
+}
+
+.cvc-preview { 
+    padding-right: 2rem;
+    padding-top: 0.25rem;
+    color: white;
+} 
+
+.dekstop-theme { 
+    display: block;
+}
+
+.mobile-theme { 
+    display: none;
+} 
+
+
+
+
+/*Active states*/ 
+#card-holder-name:active, #card-number:active, #month:active, #year:active, #cvc:active { 
+    border-image-source: linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    border-width: 1px; 
+    border-image-slice: 1; 
+    border-radius: 7.5px;
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container { 
+        flex-direction: column;
+        width: 100%;
+        padding: 0; 
+        margin: 0; 
+    }
+
+    .dekstop-theme { 
+        display: none; 
+    } 
+
+    .mobile-theme { 
+        display: block; 
+        width: 100%;  
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .front-side { 
+        top: 7rem;
+        left: 1.5rem;
+        z-index: 1;
+    }
+    
+    .back-side { 
+        top: 0.25rem;
+        left: 5rem;
+    } 
+
+    .input-area { 
+        padding-top: 3rem;
+    }
+}
